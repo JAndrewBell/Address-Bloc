@@ -15,7 +15,8 @@ class MenuController
     puts "2 - Create an entry"
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
-    puts "5 - Exit"
+    puts "5 - iterative search for entry"
+    puts "6 - Exit"
 
     selection = gets.to_i
 
@@ -37,6 +38,10 @@ class MenuController
          read_csv
          main_menu
        when 5
+         system "clear"
+         iterative_search_entries
+         main_menu
+       when 6
          puts "Good-bye!"
          # #8
          exit(0)
@@ -76,6 +81,9 @@ end
   end
 
   def search_entries
+  end
+
+  def iterative_search_entries
   end
 
   def read_csv
